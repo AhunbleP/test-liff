@@ -80,6 +80,13 @@
       doucment.getElementById("version").append(liff.getVersion())                       
       doucment.getElementById("accessToken").append(liff.getAccessToken()) 
       doucment.getElementById("isInClient").append(liff.isInClient())
+      if (liff.isInClient()) {
+        doucment.getElementById("btnLogOut").style.disply = "none" 
+      } else {
+        doucment.getElementById("btnMsg").style.disply = "none"
+        doucment.getElementById("btnScanCode").style.disply = "none" 
+        doucment.getElementById("btnClose").style.disply = "none" 
+      }        
     }
 
     async function main() {

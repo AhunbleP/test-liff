@@ -36,7 +36,7 @@
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <button id="btnClose" onclick="closed()">Close</button>
 
-  <!-- <script src="js/vconsole.min.js"></script> -->
+  <script src="js/vconsole.min.js"></script> -->
   <!-- <script>
     var vConsole = new VConsole()
     console.log("Hello World!")
@@ -75,11 +75,15 @@
     }
 
     function getEnvironment() {
+      doucment.getElementById("os").append(liff.getOS())
+      doucment.getElementById("languge").append(liff.getLanguge())
+      doucment.getElementById("version").append(liff.getVersion())                       
+      doucment.getElementById("accessToken").append(liff.getAccessToken()) 
+      doucment.getElementById("isInClient").append(liff.isInClient())
     }
 
     async function main() {
-      alert("LINE Developers x Skooldio")
-      await liff.init({ liffId: "YOUR-LIFF-ID" })
+      await liff.init({ liffId: "2000240035-Mnwoepbm" })
       // getEnvironment()
       // getUserProfile()
       // getContext()
